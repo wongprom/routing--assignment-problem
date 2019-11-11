@@ -41,6 +41,7 @@ class App extends Component {
           <Switch>
             <Route path="/users" component={Users} />
             <Route path="/courses" component={Courses} />
+            <Redirect from="/all-courses" to="/courses" />
             <Route render={() => {
               return (
                 <h1>Page not Found</h1>
@@ -59,7 +60,7 @@ class App extends Component {
               <li style={{ textDecoration: 'line-through' }}>Pass the course title to the "Course" page - pass it as a param or score bonus points by passing it as query params (you need to manually parse them though!)</li>
               <li style={{ textDecoration: 'line-through' }}>Load the "Course" component as a nested component of "Courses"</li>
               <li style={{ textDecoration: 'line-through' }}>Add a 404 error page and render it for any unknown routes</li>
-              <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
+              <li style={{ textDecoration: 'line-through' }}>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
             </ol>
           </h3>
         </div>
