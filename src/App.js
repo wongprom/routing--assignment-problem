@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, NavLink, Switch, Redirect } from 'react-router-dom';
 import Users from './containers/Users/Users'
 import Courses from './containers/Courses/Courses'
+import Course from './containers/Course/Course'
 
 
 
@@ -37,8 +38,9 @@ class App extends Component {
               </li>
             </ul>
           </nav>
-          <Route path="/Users" component={Users} />
-          <Route path="/Courses" component={Courses} />
+          <Route path="/users" component={Users} />
+          <Route path="/courses" exact component={Courses} />
+          <Route path="/courses/course" component={Course} />
 
           <h3>
             <ol style={{ textAlign: 'left' }}>
